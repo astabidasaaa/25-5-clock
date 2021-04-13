@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap");
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  overflow-y: auto;
+}
+
+.clock-display {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 31.25rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  user-select: none;
+}
+.clock-display #control {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem 0 1rem;
+}
+.clock-display #control #break {
+  width: 12rem;
+  min-width: 11rem;
+  box-sizing: border-box;
+  background-color: #60C3B9;
+  display: grid;
+  grid-template: "l l l" "a b c"/auto 35% auto;
+  justify-items: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  padding: 1.3rem 1rem;
+  border-radius: 20px;
+}
+.clock-display #control #break #break-label {
+  grid-area: l;
+  margin-bottom: 1rem;
+}
+.clock-display #control #break .break-decrement {
+  grid-area: a;
+  justify-self: end;
+  align-self: center;
+}
+.clock-display #control #break #break-length {
+  grid-area: b;
+}
+.clock-display #control #break .break-increment {
+  grid-area: c;
+  justify-self: start;
+}
+.clock-display #control #session {
+  width: 12rem;
+  min-width: 11rem;
+  box-sizing: border-box;
+  background-color: #60C3B9;
+  display: grid;
+  grid-template: "l l l" "a b c"/auto 35% auto;
+  justify-items: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 1.3rem 1rem;
+  border-radius: 20px;
+}
+.clock-display #control #session #session-label {
+  margin-bottom: 1rem;
+  grid-area: l;
+}
+.clock-display #control #session .session-decrement {
+  grid-area: a;
+  justify-self: end;
+}
+.clock-display #control #session #session-length {
+  grid-area: b;
+}
+.clock-display #control #session .session-increment {
+  grid-area: c;
+  justify-self: start;
+}
+.clock-display #timer {
+  width: 23rem;
+  box-sizing: border-box;
+  background-color: #60C3B9;
+  display: grid;
+  grid-template: "l l" "a a" "b c"/50% 50%;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+}
+.clock-display #timer #timer-label {
+  margin-bottom: 0.3rem;
+  grid-area: l;
+}
+.clock-display #timer #time-left {
+  grid-area: a;
+  margin-bottom: 0.5rem;
+}
+.clock-display #timer #start_stop {
+  grid-area: b;
+  justify-self: end;
+}
+.clock-display #timer #reset {
+  grid-area: c;
+  justify-self: start;
+}
+
+.title {
+  font: 700 2.5rem ubuntu;
+  color: #60C3B9;
+}
+
+.label {
+  font: 500 1.3rem ubuntu;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.time-left {
+  font: 700 3.5rem roboto;
+  color: #fff;
+}
+
+.p {
+  font: 700 1.7rem roboto;
+  color: #fff;
+}
+
+.b {
+  background-color: #eee;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  color: #31837A;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #31837A;
+}
+.b.break-decrement i, .b.break-increment i, .b.session-decrement i, .b.session-increment i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b.start_stop {
+  width: 2.5rem;
+}
+.b:hover {
+  cursor: pointer;
+}
+.b:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.turn-red-now {
+  color: #CE2335;
+}
+
+#author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1rem;
+}
+#author p {
+  font: 400 0.9rem ubuntu;
+  color: #60C3B9;
+  margin: 0;
+}
+#author p a:link {
+  text-decoration: none;
+  color: #60C3B9;
+}
+#author p a:visited {
+  text-decoration: none;
+  color: #60C3B9;
+}
+#author p a:hover {
+  text-decoration: none;
+  color: #CE2335;
+}
+#author p a:active {
+  text-decoration: none;
+  color: #31837A;
+}
